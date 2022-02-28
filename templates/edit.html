@@ -1,42 +1,39 @@
-{% extends "base.html"%} {% block content %} {% load static %}
-<section class="content">
-  <div class="main-header">
-    <img src="{% static 'img/twitter.png' %}" class="logo" />
-    <h1>EDIT</h1>
-  </div>
-  <section class="post_form">
-    <form
-      action="/edit/{{post.id}}/"
-      method="POST"
-      enctype="multipart/form-data"
-    >
-      {% csrf_token %}
-      <input
-        class="input"
-        type="text"
-        name="name"
-        placeholder="Name"
-        value="{{post.name}}"
-        required
-      />
-      <textarea
-        class="textarea"
-        name="body"
-        placeholder="{{post.body}}"
-        required
-      ></textarea>
-      <label for="{{post.name}}"></label>
-      {% if post.image.url %}
-      <img class="tweet-border" src="{{ post.image.url }}" />
-      {% endif %}
-      <div class="flex">
-        <input class="inputimage" name="image" type="file" />
-        <div class="b1">
-          <a class="update-button" href="{%  url 'index' %}">Cancel</a>
-          <input class="update-button" type="submit" value="Update" />
+{% extends 'base.html' %} {% block content %}{% load static %}
+<div class="bordert">
+  <section class="content">
+    <div class="header">
+      <img src="/static/img/twitter.png" class="logo" />
+      <a href="#">Edit</a>
+    </div>
+    <section class="post_form">
+      <form
+        action="/edit/{{posts.id}}/"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %}
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value="{{posts.name}}"
+          required
+        /><br />
+        <textarea name="body" placeholder="{{posts.body}}" required></textarea>
+        <br />
+        <input id="uploadfile" type="file" name="image" />
+        {% if posts.image.url %}
+        <img class="Image" src="{{posts.image.url}}" />
+        <!-- style="width: 370px; height: 370px" -->
+
+        {% endif %}
+        <br />
+        <div class="tweet">
+          <a href="{% url 'index' %}" id="btnn" type="submit">Cancel</a>
+          <input id="btn" type="submit" value="Update" />
         </div>
-      </div>
-    </form>
+      </form>
+    </section>
   </section>
-</section>
-{% endblock %}
+</div>
+{% endblock%}
