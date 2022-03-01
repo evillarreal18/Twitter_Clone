@@ -152,8 +152,11 @@ body {
   flex-basis: 15%;
 }
 .posts li .logo img {
-  width: 60%;
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid rgb(235, 238, 240);
 }
+
 .posts li .name_body {
   flex-basis: 85%;
 }
