@@ -152,7 +152,7 @@ body {
   flex-basis: 15%;
 }
 .posts li .logo img {
-  width: 100%;
+  width: 75px;
   border-radius: 50%;
   border: 1px solid rgb(235, 238, 240);
 }
@@ -179,7 +179,7 @@ body {
     padding-left: 10px;
   }
   .Image {
-    height: 305px;
+    height: 285px;
   }
 
   #btn {
