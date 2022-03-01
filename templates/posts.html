@@ -5,7 +5,13 @@
       <img src="/static/img/twitter.png" class="logo" />
       <a href="#">Home</a>
     </div>
+
+
     <section class="post_form">
+      <div class="userpic" >
+      <div class="logo1">
+        <img src="{% static 'img/profile.png' %}" />
+      </div>
       <form action="/" method="POST" enctype="multipart/form-data">
         {%csrf_token %}
         <input type="text" name="name" placeholder="Name" required />
@@ -18,6 +24,7 @@
         <input id="uploadfile" type="file" name="image" />
         <input id="btn" type="submit" value="Tweet" />
       </form>
+      </div>
     </section>
     <section class="posts">
       <ul>
@@ -28,8 +35,8 @@
             src="{% static 'img/menu.png' %}"
           />
           <div class="menu">
-            <a href="edit/{{post.id}}">edit</a><br />
-            <a href="delete/{{ post.id }}">delete</a>
+            <a href="edit/{{post.id}}"><strong>Edit</strong></a><br />
+            <a href="delete/{{ post.id }}"><strong>Delete</strong></a>
           </div>
 
           <div class="logo">

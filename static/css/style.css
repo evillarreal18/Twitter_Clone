@@ -42,7 +42,7 @@ body {
   /* text-align: center; */
 }
 .post_form {
-  padding: 20px 40px;
+  padding: 20px 20px;
   border-bottom: 1px solid #ccc;
 }
 .post_form input {
@@ -121,7 +121,7 @@ body {
   position: relative;
   display: flex;
   border-bottom: 1px solid #ccc;
-  padding: 20px 40px;
+  padding: 20px 20px;
   list-style: none;
 }
 
@@ -194,4 +194,16 @@ body {
     padding: 5px;
     margin-left: 100px;
   }
+}
+
+.logo1 img {
+  width: 75px;
+  border-radius: 50%;
+  border: 1px solid rgb(235, 238, 240);
+  margin-right: 20px;
+}
+
+.userpic{
+  display: flex;
+  justify-content: space-between;
 }
