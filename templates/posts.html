@@ -33,7 +33,7 @@
           </div>
 
           <div class="logo">
-            <img src="{% static 'img/user.png' %}" />
+            <img src="{% static 'img/profile-icon.png' %}" />
           </div>
           <div class="name_body">
             <div class="name">{{post.name}} <br /></div>
@@ -41,11 +41,11 @@
             <p>{{post.body}} <br /></p>
             <!-- <a href="/delete/{{ post.id }}/">delete</a> -->
             <!-- {% if post.image.url %} -->
-            <img class="Image" src="{{post.image.url}}" style="width: 100%;" />
+            <img class="Image" src="{{post.image.url}}" style="width: auto;" />
             <!-- {% endif %} -->
             <div>
               <a href="/like/{{post.id}}">
-                <img src="/static/img/heart.png" style="width: 30px"
+                <img src="/static/img/heart.png" style="width: 20px"
               /></a>
 
               {{post.likecount}}
